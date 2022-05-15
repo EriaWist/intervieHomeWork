@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PharmacyGeometry" representedClassName="PharmacyGeometry" syncable="YES" codeGenerationType="class">
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="properties" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PharmacyProperties" inverseName="geometry" inverseEntity="PharmacyProperties"/>
+    </entity>
+    <entity name="PharmacyProperties" representedClassName="PharmacyProperties" syncable="YES" codeGenerationType="class">
+        <attribute name="addresss" optional="YES" attributeType="String"/>
+        <attribute name="available" optional="YES" attributeType="String"/>
+        <attribute name="county" optional="YES" attributeType="String"/>
+        <attribute name="cunli" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="mask_adult" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mask_child" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="town" optional="YES" attributeType="String"/>
+        <attribute name="updated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PharmacyGeometry" inverseName="properties" inverseEntity="PharmacyGeometry"/>
+    </entity>
+    <elements>
+        <element name="PharmacyProperties" positionX="-184.6055908203125" positionY="-288.4734497070312" width="128" height="223"/>
+        <element name="PharmacyGeometry" positionX="-54" positionY="-9" width="128" height="88"/>
+    </elements>
+</model>
